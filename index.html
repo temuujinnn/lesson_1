@@ -1,0 +1,80 @@
+<html>
+<style>
+    body {
+        height: 100vh;
+        overflow: hidden;
+        background: linear-gradient(45deg, #061de3, #e306ca);
+        font-family: Helvetica, sans-serif;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        width: 350px;
+        height: 500px;
+        perspective: 800px;
+
+
+    }
+
+    .container:hover>.card {
+        cursor: pointer;
+        transform: rotateY(180deg);
+
+    }
+
+    .card {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: 1s;
+
+    }
+
+    .front,
+    .back {
+        height: 100%;
+        width: 100%;
+        border-radius: 1rem;
+        box-shadow: 0 0 5px rgba(50, 50, 50, 0.25);
+        position: absolute;
+        backface-visibility: hidden;
+    }
+
+    .front {
+        background: linear-gradient(45deg, #061de3, #e306ca);
+
+    }
+
+    .back {
+        background-color: #3a3a3a;
+        transform: rotateY(180deg);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+    }
+</style>
+<title>Flip card</title>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="card">
+                <div class="front"></div>
+                <div class="back">
+                    <h1>Back of Card</h1>
+                    <div>description</div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </main>
+</body>
+
+</html>
